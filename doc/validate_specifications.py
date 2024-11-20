@@ -22,9 +22,23 @@ def extract_tags_from_test_file(test_file):
     with open(test_file, 'r') as f:
         test_content = f.read()
 
-    # Regex to find @Tag annotations in the test file
+    # Remove comments from the test content
+    test_content = remove_comments(test_content)
+
+    # Regex to find @Tag annotations in the test file (ignoring those inside comments)
     tags = set(re.findall(r'@Tag\(\s*"([^"]+)"\)', test_content))
     return tags
+
+def remove_comments(code):
+    """
+    Removes comments from the provided Java code.
+    Handles single-line comments (//) and multi-line comments (/* */).
+    """
+    # Remove single-line comments
+    code = re.sub(r'//.*', '', code)
+    # Remove multi-line comments
+    code = re.sub(r'/\*.*?\*/', '', code, flags=re.DOTALL)
+    return code
 
 def validate_tags(spec_tags, test_tags):
     missing_tags = spec_tags - test_tags
