@@ -28,7 +28,7 @@ class FizzBuzzTest {
     @Tag("DivisibleByFive")    // Tagging with DivisibleByFive
     void testForDivisibleByFive() {
         String expected = "Buzz";
-        assertEquals(expected, FizzBuzz.compute(5), "Should return Buzz");
+        assertEquals(expected, FizzBuzz.compute(5), "Should return result Buzz");
     }
 
     // If number is divisible by 3 and 5, print FizzBuzz
