@@ -1,0 +1,53 @@
+{
+  "specifications": [
+    {
+      "test_case_id": "TC_FizzBuzz_1",
+      "description": "If number is divisible by 3, print Fizz",
+      "input": 3,
+      "expected_output": "Fizz",
+      "tags": ["Fizz", "DivisibleByThree"]
+    },
+    {
+      "test_case_id": "TC_FizzBuzz_2",
+      "description": "If number is divisible by 5, print Buzz",
+      "input": 5,
+      "expected_output": "Buzz",
+      "tags": ["Buzz", "DivisibleByFive"]
+    },
+    {
+      "test_case_id": "TC_FizzBuzz_3",
+      "description": "If number is divisible by 3 and 5, print FizzBuzz",
+      "input": 15,
+      "expected_output": "FizzBuzz",
+      "tags": ["FizzBuzz", "DivisibleByThreeAndFive"]
+    },
+    {
+      "test_case_id": "TC_FizzBuzz_4",
+      "description": "If number is NOT divisible by 3 or 5, then print the number",
+      "input": 1,
+      "expected_output": "1",
+      "tags": ["NotDivisibleByThreeOrFive"]
+    },
+    {
+      "test_case_id": "TC_FizzBuzz_5",
+      "description": "Testing with Small data file",
+      "input": "small-test-data.csv",
+      "expected_output": "Based on the small data file",
+      "tags": ["SmallDataFile"]
+    },
+    {
+      "test_case_id": "TC_FizzBuzz_6",
+      "description": "Testing with Medium data file",
+      "input": "medium-test-data.csv",
+      "expected_output": "Based on the medium data file",
+      "tags": ["MediumDataFile"]
+    },
+    {
+      "test_case_id": "TC_FizzBuzz_7",
+      "description": "Testing with Large data file",
+      "input": "large-test-data.csv",
+      "expected_output": "Based on the large data file",
+      "tags": ["LargeDataFile"]
+    }
+  ]
+}
